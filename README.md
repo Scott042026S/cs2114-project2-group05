@@ -72,15 +72,11 @@ We extended the provided class as the spec planned, and the application uses it 
 
 ### What is left to finish the MVP (in order)
 
-1. **Get everything compiling in `src` (Nicholas).** Move `CompletionCheckerApp` and its test into `src`, then trim or stub the menu items whose `CompletionChecker` methods do not exist yet, so the app runs on the MVP path.
-2. **Run the app tests (Nicholas).** Run `CompletionCheckerAppTest` against the real `CompletionChecker` and fix any mismatch in messages or behavior.
-3. **Build `Move` and `MoveTest` (Manveen).** Constructor validation, getters, and a replay line for each type.
-4. **Add the history chain to `CompletionChecker` (Scott).** Record add, complete, and delete as Moves, with `appliedCount`.
-5. **Add postpone, pull forward, and `getUpcoming` (Scott).**
-6. **Add undo and redo (Scott).** One undo per Move type, and a new action after an undo clears the redo moves.
-7. **Add `getReplay` and `mostPostponed` (Scott).**
-8. **Re-enable the full menu and run an end-to-end script (Nicholas).**
-9. **Support the chain (Sophia).** Fix any `LinkedChain` gap the new features expose, and review undo/redo state consistency across the task chain and the history chain.
+1. **Add the history chain to `CompletionChecker` (Scott).** Record add, complete, and delete as Moves, with `appliedCount`.
+2. **Add postpone, pull forward, and `getUpcoming` (Scott).**
+3. **Add `getReplay` and `mostPostponed` (Scott).**
+4. **Re-enable the full menu and run an end-to-end script (Nicholas).**
+5. **Support the chain (Sophia).** Fix any `LinkedChain` gap the new features expose, and review undo/redo state consistency across the task chain and the history chain.
 
 ### Stretch goals
 
@@ -88,17 +84,10 @@ We extended the provided class as the spec planned, and the application uses it 
 - **Dropped:** day planner with `TimeBlock`s, priorities and due dates, subtasks, save/load, recurring tasks, and swap/rotate (replaced by postpone and pull forward).
 
 ### New tests needed
-
-- **`MoveTest`:** a valid Move stores all six values; a null task or an unknown type (for example "rename") throws; `toString` has its own wording for add, complete, delete, postpone, and pull forward.
-- **`CompletionCheckerTest`:**
-  - postpone and pull forward: normal cases, plus 0, too large, and no-tasks bad inputs;
-  - undo and redo for each of the five Move types, restoring both the task order and the cursor;
-  - a new action after an undo makes `canRedo()` false;
-  - nothing to undo or redo throws `IllegalStateException`;
-  - `getReplay` shows "No actions today." when empty;
-  - `mostPostponed` returns the right task, returns `null` when none were postponed, and handles two tasks with the same name.
-- **`CompletionCheckerAppTest`:** run postpone, pull forward, undo, and redo against the real `CompletionChecker`, then a full-day script that ends with the replay and most-postponed output.
-- **`LinkedChainTest`:** add cases only if the new features expose a chain bug.
+|mostPostponed: a tie between two tasks (the one postponed first wins).|
+|State consistency: a longer random sequence of add, complete, delete, postpone, pull forward, undo, and redo, compared against a simple reference model, to catch cursor or order bugs the single-step tests miss.|
+|CompletionCheckerAppTest: undo and redo of an add-at-position through the menu, and removing a reminder after earlier reminders were added.|
+|TaskTest: boundary lengths (exactly 60-character names and 200-character descriptions accepted, one more rejected).|
 
 ### Who does what
 
