@@ -24,11 +24,11 @@ What does not work yet?
 - getTasks() from the specification is not implemented in the supplied checker.
 
 Next Steps
-3. Finish and validate Move and its tests, and confirm Task validation. - Manveen
-4. Add move history and record add, complete, and delete. Implement undo/redo and discard redo moves after a new action. - Scott
-5. Implement getTasks(), getUpcoming(), postpone, and pull-forward with valid ranges. - Nick
-7. Integrate final menu actions and remove reminders to match the revised scope once LinkedChain<Move> provides the second type. - Sophia
-8. Consolidate console tests, fix stream restoration and exit input, configure testing consistently, and run the full application and tests. - Everyone
+1. Finish and validate Move and its tests, and confirm Task validation. - Manveen
+2. Add move history and record add, complete, and delete. Implement undo/redo and discard redo moves after a new action. - Scott
+3. Implement getTasks(), getUpcoming(), postpone, and pull-forward with valid ranges. - Nick
+4. Integrate final menu actions and remove reminders to match the revised scope once LinkedChain<Move> provides the second type. - Sophia
+5. Consolidate console tests, fix stream restoration and exit input, configure testing consistently, and run the full application and tests. - Everyone
 
 
 Stretch Goals
