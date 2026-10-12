@@ -1,11 +1,3 @@
-import static org.junit.Assert.*;
-import org.junit.Test;
-
-/**
- * Validation, boundaries and immutable task accessors.
- * @author ChatGPT (GenAI draft; Manveen is the proposed review owner)
- * @version 2026.10.11
- */
 public class TaskTest {
     @Test public void constructorTrimsAndGettersFormat() {
         Task task = new Task(" Laundry ", " Wash clothes ");
