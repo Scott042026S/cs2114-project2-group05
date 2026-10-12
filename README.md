@@ -84,10 +84,13 @@ We extended the provided class as the spec planned, and the application uses it 
 - **Dropped:** day planner with `TimeBlock`s, priorities and due dates, subtasks, save/load, recurring tasks, and swap/rotate (replaced by postpone and pull forward).
 
 ### New tests needed
-|mostPostponed: a tie between two tasks (the one postponed first wins).|
-|State consistency: a longer random sequence of add, complete, delete, postpone, pull forward, undo, and redo, compared against a simple reference model, to catch cursor or order bugs the single-step tests miss.|
-|CompletionCheckerAppTest: undo and redo of an add-at-position through the menu, and removing a reminder after earlier reminders were added.|
-|TaskTest: boundary lengths (exactly 60-character names and 200-character descriptions accepted, one more rejected).|
+1. mostPostponed: a tie between two tasks (the one postponed first wins)
+   
+2. State consistency: a longer random sequence of add, complete, delete, postpone, pull forward, undo, and redo, compared against a simple reference model, to catch cursor or order bugs the single-step tests miss.
+
+3. CompletionCheckerAppTest: undo and redo of an add-at-position through the menu, and removing a reminder after earlier reminders were added.|
+
+4. TaskTest: boundary lengths (exactly 60-character names and 200-character descriptions accepted, one more rejected).
 
 ### Who does what
 
