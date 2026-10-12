@@ -18,7 +18,6 @@ public class CompletionChecker
 {
     // ~ Fields ................................................................
     private LinkedChain<Task> tasks;
-    private LinkedChain<Move> history;
     private int appliedCount;
     private LinkedChain<String> reminders;
 
@@ -30,7 +29,6 @@ public class CompletionChecker
     public CompletionChecker()
     {
         tasks = new LinkedChain<>();
-        history = new LinkedChain<>();
         appliedCount = 0;
         reminders = new LinkedChain<>();
     }
