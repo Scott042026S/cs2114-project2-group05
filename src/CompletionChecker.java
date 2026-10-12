@@ -20,6 +20,7 @@ public class CompletionChecker
     private LinkedChain<Task> tasks;
     private int appliedCount;
     private LinkedChain<String> reminders;
+    private LinkedChain<Move> history;
 
     // ~ Constructors ..........................................................
     /**
@@ -31,6 +32,7 @@ public class CompletionChecker
         tasks = new LinkedChain<>();
         appliedCount = 0;
         reminders = new LinkedChain<>();
+        history = new LinkedChain<>();
     }
 
 
