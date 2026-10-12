@@ -1,8 +1,3 @@
-/**
- * One immutable task; duplicate names represent separate tasks.
- * @author ChatGPT (GenAI draft; Manveen is the proposed review owner)
- * @version 2026.10.11
- */
 public class Task {
     private final String name;
     private final String description;
