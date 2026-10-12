@@ -114,11 +114,11 @@ We extended the provided class as the spec planned, and the application uses it 
 | File | Team member | Contribution |
 |---|---|---|
 | `LinkedChain.java` | Sophia | Wrote the extended chain (tail, positional methods, cursor) with GenAI assistance; reviewed and tested |
-| `LinkedChainTest.java` | Sophia | Wrote with GenAI assistance; ran and verified (all passing) |
+| `LinkedChainTest.java` | Sophia | Wrote and tested; ran and verified (all passing) |
 | `Task.java` | Manveen | Wrote |
 | `TaskTest.java` | Manveen | Wrote and tested (passing) |
-| `Move.java` | Manveen | Not yet in the prototype |
-| `MoveTest.java` | Manveen | Not yet in the prototype |
+| `Move.java` | Manveen | Wrote and tested |
+| `MoveTest.java` | Manveen | Wrote and tested |
 | `CompletionChecker.java` | Scott | Wrote the prototype (tasks and reminders) |
 | `CompletionCheckerTest.java` | Scott | Wrote and tested (passing) |
 | `CompletionCheckerApp.java` | Nicholas | Drafted with GenAI; Nicholas to review, revise, and integrate |
