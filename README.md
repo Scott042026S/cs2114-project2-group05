@@ -98,7 +98,7 @@ Everything in the MVP is built, and all tests pass.
 | `CompletionCheckerTest.java` | Scott | Reviewed, converted, and tested (passing) |
 | `CompletionCheckerApp.java` | Nicholas | Drafted with GenAI; reviewed, revised, and run (passing). |
 | `CompletionCheckerAppTest.java` | Nicholas | Drafted with GenAI; Nicholas to review, revise, and run |
-| `README.md` | Sophia | Drafted with GenAI; reviewed by the group |
+| `README.md` | Sophia, Scott | Drafted with GenAI; reviewed by the group |
 
 ### GenAI use
 
